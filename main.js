@@ -8,7 +8,7 @@
   let sent = false;
   const fields = ["Nombre", "Comida_favorita", "Fecha", "Hora", "Mensaje"];
   try {
-    const saved = JSON.parse(sessionStorage.getItem("cena-esteysi-v5") || "{}");
+    const saved = JSON.parse(sessionStorage.getItem("cena-yolibeth-v6") || "{}");
     fields.forEach(function (name) { if (saved[name]) form.elements[name].value = saved[name]; });
   } catch (_) { /* Storage is optional. */ }
   form.addEventListener("input", function () {
@@ -16,7 +16,7 @@
       const data = new FormData(form);
       const saved = {};
       fields.forEach(function (name) { saved[name] = data.get(name); });
-      sessionStorage.setItem("cena-esteysi-v5", JSON.stringify(saved));
+      sessionStorage.setItem("cena-yolibeth-v6", JSON.stringify(saved));
     } catch (_) { /* Storage is optional. */ }
   });
   document.querySelectorAll("[data-food]").forEach(function (button) {
@@ -41,7 +41,7 @@
     if (!payload.Nombre.trim() || !payload.Comida_favorita.trim() || !/^\d{2}:\d{2}$/.test(payload.Hora)) { status.textContent = "Completa tu nombre, comida, fecha y hora."; return; }
     payload.Zona_horaria = "America/Caracas (Venezuela, UTC−04:00)";
     payload.website = window.location.href.split("#")[0];
-    if (/^PRUEBA TECNICA/i.test(payload.Nombre)) payload.subject = "PRUEBA TECNICA · no es una respuesta de Esteysi";
+    if (/^PRUEBA TECNICA/i.test(payload.Nombre)) payload.subject = "PRUEBA TECNICA · no es una respuesta real";
     sending = true;
     submit.disabled = true;
     submit.textContent = "Enviando tu respuesta…";
