@@ -3,6 +3,19 @@
   const form = document.getElementById("dinner-form");
   const status = document.getElementById("form-status");
   const submit = document.getElementById("confirm");
+  const invitation = document.getElementById("portada");
+  const details = document.getElementById("elegir");
+  const accept = document.getElementById("accept-button");
+  let accepted = false;
+  accept.addEventListener("click", function () {
+    accepted = true;
+    accept.setAttribute("aria-expanded", "true");
+    invitation.hidden = true;
+    details.hidden = false;
+    details.inert = false;
+    window.scrollTo({ top: 0, behavior: "instant" });
+    document.getElementById("form-title").focus({ preventScroll: true });
+  });
   const allowedDates = ["Viernes 20 de noviembre de 2026", "Sábado 21 de noviembre de 2026", "Viernes 27 de noviembre de 2026", "Sábado 28 de noviembre de 2026"];
   let sending = false;
   let sent = false;
@@ -35,7 +48,7 @@
   });
   form.addEventListener("submit", async function (event) {
     event.preventDefault();
-    if (sending || sent || !form.reportValidity()) return;
+    if (!accepted || sending || sent || !form.reportValidity()) return;
     const payload = Object.fromEntries(new FormData(form));
     if (!allowedDates.includes(payload.Fecha)) { status.textContent = "Elige uno de los viernes o sábados disponibles."; return; }
     if (!payload.Nombre.trim() || !payload.Comida_favorita.trim() || !/^\d{2}:\d{2}$/.test(payload.Hora)) { status.textContent = "Completa tu nombre, comida, fecha y hora."; return; }

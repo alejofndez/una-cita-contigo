@@ -1,4 +1,6 @@
-# Una cita contigo · Yolibeth Zambrano · v6 · 2026-10-30
+# Una cita contigo · Yolibeth Zambrano · v7 · 2026-10-30
+
+Flujo corregido: el formulario se encuentra oculto e inactivo desde el HTML inicial. Solo el botón Sí lo revela y reemplaza la portada. No, el desplazamiento, un enlace con #elegir y una recarga no desbloquean el formulario. La aceptación no se conserva entre recargas. El envío también verifica que se haya aceptado. Sin JavaScript permanece oculto y se muestra una indicación para activarlo.
 
 Versión independiente de las anteriores. Solo primera cita: nombre, comida, viernes/sábado posterior al 15 de noviembre de 2026, hora de Venezuela y mensaje opcional.
 
