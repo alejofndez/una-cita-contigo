@@ -50,10 +50,10 @@
     const timeout = setTimeout(function () { controller.abort(); }, 25000);
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(payload), signal: controller.signal
+        method: "POST", headers: { Accept: "application/json" }, body: new URLSearchParams(payload), signal: controller.signal
       });
       const result = await response.json();
-      if (!response.ok || (result.success !== true && result.success !== "true")) throw new Error("Submission rejected");
+      if (!response.ok || (result.success !== true && result.success !== "true")) { console.warn("Envío rechazado", response.status, result.message || "Sin mensaje"); throw new Error("Submission rejected"); }
       sent = true;
       document.getElementById("summary").textContent = payload.Comida_favorita + " · " + payload.Fecha + " · " + payload.Hora + " (Venezuela)";
       form.hidden = true;
