@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#190c12">
   <meta name="description" content="Una cena, una buena conversación y la oportunidad de conocernos de verdad.">
-  <title>Una cita contigo</title>
+  <title>Esteysi, una cita contigo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261030">
-  <link rel="stylesheet" href="cena.css?v=20261030">
-  <script defer src="main.js?v=20261030"></script>
+  <link rel="stylesheet" href="styles.css?v=20261030-esteysi">
+  <link rel="stylesheet" href="cena.css?v=20261030-esteysi">
+  <script defer src="main.js?v=20261030-esteysi"></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar a la invitación</a>
@@ -21,9 +21,9 @@
     <section class="step step-intro" id="portada" aria-labelledby="intro-title">
       <img class="intro-image" src="assets/img/hero.webp" alt="Montañas de los Andes venezolanos al atardecer" fetchpriority="high"><div class="intro-scrim" aria-hidden="true"></div>
       <div class="invitation-card">
-        <p class="eyebrow">Todas las historias empiezan con un momento</p>
+        <p class="eyebrow">Para Esteysi Santos, con intención</p>
         <h1 id="intro-title">Una cita <em>contigo</em></h1>
-        <p class="intro-copy">Sé que te gusta viajar y me encantaría ser tu compañero para conocer el mundo. Pero empecemos por una cena y por conocernos de verdad.</p>
+        <p class="intro-copy">Esteysi, sé que te gusta viajar y me encantaría ser tu compañero para conocer el mundo. Pero empecemos por una cena y por conocernos de verdad.</p>
         <p class="intro-question">¿Me dejas invitarte a cenar?</p>
         <div class="button-row button-row-center"><a class="button button-primary" href="#elegir">Sí, me encantaría ♥</a><button class="button button-soft" type="button" id="no-button">No</button></div>
         <p class="playful-message" id="no-message" aria-live="polite">Una buena conversación, algo rico y ninguna prisa.</p>
@@ -34,7 +34,7 @@
         <p class="eyebrow">Hagamos un espacio para conocernos</p><h2 id="form-title">Tú eliges el <em>momento</em></h2>
         <p class="lead">Una cena después del 15 de noviembre. Elige el viernes o sábado que te venga mejor.</p>
         <form id="dinner-form" class="food-form" action="https://formsubmit.co/alejofndez@gmail.com" method="POST">
-          <div class="field"><label for="name">Tu nombre</label><input id="name" name="Nombre" autocomplete="given-name" maxlength="60" required placeholder="¿Cómo te llamas?"></div>
+          <div class="field"><label for="name">Tu nombre</label><input id="name" name="Nombre" autocomplete="name" maxlength="60" required value="Esteysi Santos"></div>
           <fieldset><legend>¿Cuál es tu comida favorita?</legend><div class="food-grid">
             <button class="food-option" type="button" data-food="Sushi" aria-pressed="false"><span>🍣</span>Sushi</button><button class="food-option" type="button" data-food="Pizza" aria-pressed="false"><span>🍕</span>Pizza</button><button class="food-option" type="button" data-food="Pasta" aria-pressed="false"><span>🍝</span>Pasta</button><button class="food-option" type="button" data-food="Hamburguesa" aria-pressed="false"><span>🍔</span>Hamburguesa</button><button class="food-option" type="button" data-food="Mariscos" aria-pressed="false"><span>🦐</span>Mariscos</button><button class="food-option" type="button" data-food="Otra" aria-pressed="false"><span>✨</span>Otra</button>
           </div></fieldset>
@@ -53,7 +53,7 @@
           <button class="button button-primary button-wide" id="confirm" type="submit">Confirmar nuestra cita ♥</button>
           <p class="response-note field-note">El lugar lo coordinamos juntos. Lo importante es que te sientas cómoda.</p>
         </form>
-        <section id="confirmation" class="bridge-card" hidden aria-labelledby="thanks-title"><span class="seal" aria-hidden="true">♥</span><p class="eyebrow">Un comienzo bonito</p><h2 id="thanks-title" tabindex="-1">Qué ilusión <em>verte</em>.</h2><p class="bridge-copy">Gracias por darme la oportunidad de conocerte. Tu respuesta fue recibida; ahora solo queda hacer de esa cena un momento bonito.</p><div class="choice-summary" id="summary"></div></section>
+        <section id="confirmation" class="bridge-card" hidden aria-labelledby="thanks-title"><span class="seal" aria-hidden="true">♥</span><p class="eyebrow">Un comienzo bonito</p><h2 id="thanks-title" tabindex="-1">Qué ilusión verte, <em>Esteysi</em>.</h2><p class="bridge-copy">Gracias por darme la oportunidad de conocerte. Tu respuesta fue recibida; ahora solo queda hacer de esa cena un momento bonito.</p><div class="choice-summary" id="summary"></div></section>
       </div>
     </section>
   </main>

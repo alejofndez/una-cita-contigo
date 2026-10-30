@@ -8,7 +8,7 @@
   let sent = false;
   const fields = ["Nombre", "Comida_favorita", "Fecha", "Hora", "Mensaje"];
   try {
-    const saved = JSON.parse(sessionStorage.getItem("cena-v4") || "{}");
+    const saved = JSON.parse(sessionStorage.getItem("cena-esteysi-v5") || "{}");
     fields.forEach(function (name) { if (saved[name]) form.elements[name].value = saved[name]; });
   } catch (_) { /* Storage is optional. */ }
   form.addEventListener("input", function () {
@@ -16,7 +16,7 @@
       const data = new FormData(form);
       const saved = {};
       fields.forEach(function (name) { saved[name] = data.get(name); });
-      sessionStorage.setItem("cena-v4", JSON.stringify(saved));
+      sessionStorage.setItem("cena-esteysi-v5", JSON.stringify(saved));
     } catch (_) { /* Storage is optional. */ }
   });
   document.querySelectorAll("[data-food]").forEach(function (button) {
