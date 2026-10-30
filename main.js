@@ -40,7 +40,8 @@
     if (!allowedDates.includes(payload.Fecha)) { status.textContent = "Elige uno de los viernes o sábados disponibles."; return; }
     if (!payload.Nombre.trim() || !payload.Comida_favorita.trim() || !/^\d{2}:\d{2}$/.test(payload.Hora)) { status.textContent = "Completa tu nombre, comida, fecha y hora."; return; }
     payload.Zona_horaria = "America/Caracas (Venezuela, UTC−04:00)";
-    payload._url = window.location.href.split("#")[0];
+    payload.website = window.location.href.split("#")[0];
+    if (/^PRUEBA TECNICA/i.test(payload.Nombre)) payload.subject = "PRUEBA TECNICA · no es una respuesta de Esteysi";
     sending = true;
     submit.disabled = true;
     submit.textContent = "Enviando tu respuesta…";
@@ -48,7 +49,7 @@
     const controller = new AbortController();
     const timeout = setTimeout(function () { controller.abort(); }, 25000);
     try {
-      const response = await fetch("https://formsubmit.co/ajax/alejofndez@gmail.com", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(payload), signal: controller.signal
       });
       const result = await response.json();

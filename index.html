@@ -33,7 +33,7 @@
       <div class="content-shell narrow-shell">
         <p class="eyebrow">Hagamos un espacio para conocernos</p><h2 id="form-title">Tú eliges el <em>momento</em></h2>
         <p class="lead">Una cena después del 15 de noviembre. Elige el viernes o sábado que te venga mejor.</p>
-        <form id="dinner-form" class="food-form" action="https://formsubmit.co/alejofndez@gmail.com" method="POST">
+        <form id="dinner-form" class="food-form" action="https://api.web3forms.com/submit" method="POST">
           <div class="field"><label for="name">Tu nombre</label><input id="name" name="Nombre" autocomplete="name" maxlength="60" required value="Esteysi Santos"></div>
           <fieldset><legend>¿Cuál es tu comida favorita?</legend><div class="food-grid">
             <button class="food-option" type="button" data-food="Sushi" aria-pressed="false"><span>🍣</span>Sushi</button><button class="food-option" type="button" data-food="Pizza" aria-pressed="false"><span>🍕</span>Pizza</button><button class="food-option" type="button" data-food="Pasta" aria-pressed="false"><span>🍝</span>Pasta</button><button class="food-option" type="button" data-food="Hamburguesa" aria-pressed="false"><span>🍔</span>Hamburguesa</button><button class="food-option" type="button" data-food="Mariscos" aria-pressed="false"><span>🦐</span>Mariscos</button><button class="food-option" type="button" data-food="Otra" aria-pressed="false"><span>✨</span>Otra</button>
@@ -47,8 +47,8 @@
           </div></fieldset>
           <div class="field"><label for="time">¿A qué hora te queda bien?</label><input id="time" type="time" name="Hora" required><p class="field-note">Hora de Venezuela.</p></div>
           <div class="field"><label for="notes">Algo que quieras decirme <span class="optional">(opcional)</span></label><textarea id="notes" name="Mensaje" rows="3" maxlength="500" placeholder="Una preferencia, una alergia o unas palabras…"></textarea></div>
-          <input type="hidden" name="_subject" value="♥ Cita confirmada · comida, fecha y hora"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="Estado" value="Invitación aceptada"><input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <p class="field-note">Al confirmar, enviarás tu elección por correo a quien te invita, a través de FormSubmit.</p>
+          <input type="hidden" name="access_key" value="c306d0f1-1ba2-45f1-b61c-221e7d248a50"><input type="hidden" name="subject" value="♥ Esteysi confirmó la cita · comida, fecha y hora"><input type="hidden" name="from_name" value="Una cita contigo"><input type="hidden" name="Estado" value="Invitación aceptada"><input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" aria-hidden="true">
+          <p class="field-note">Al confirmar, enviarás tu elección por correo a quien te invita, a través de Web3Forms.</p>
           <p id="form-status" role="status" aria-live="polite"></p>
           <button class="button button-primary button-wide" id="confirm" type="submit">Confirmar nuestra cita ♥</button>
           <p class="response-note field-note">El lugar lo coordinamos juntos. Lo importante es que te sientas cómoda.</p>
